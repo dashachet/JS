@@ -28,3 +28,19 @@ function goStore() {
     button2.innerText = "Buy weapon (30 gold)";
     button3.innerText = "Go to town square";
 }
+
+function goCave() {
+    console.log("Going to cave.");
+}
+
+function fightDragon() {
+    console.log("Fighting dragon.");
+}
+
+function buyHealth() {
+
+}
+
+function buyWeapon() {
+
+}
