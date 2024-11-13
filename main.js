@@ -17,3 +17,26 @@ console.log('shift names', shiftnames); //удаляет первый элеме
 
 const unshiftnames = names.unshift('Henadzii');
 console.log(unshiftnames); // вернется цифра
+
+const reversenames = names.reverse();
+console.log(reversenames);
+
+
+const arr = ['ab', 'cd', 'ef' ];
+// const arrsplit = arr.split('-', 2);
+
+// console.log(arrsplit);
+
+const arrjoin = arr.join('-'); //объединяет элементы массива !!!!в строку!!! с указанным разделителем (он будет вставлен между элементами массива). Разделитель задается параметром метода и не является обязательным. Если он не задан - по умолчанию в качестве разделителя возьмется запятая. Если вы хотите слить элементы массива без разделителя - укажите его как пустую строку ''.
+
+console.log(arrjoin);
+
+// надо сделать reverse строки номера телефона.Результатом выполнения должна быть строка, а не массив.
+
+const telephoneNumber = '375446788902';
+const splittelephone = telephoneNumber.split('');
+console.log(splittelephone);
+const reversetelephone = splittelephone.reverse();
+console.log(reversetelephone);
+const jointelephone = reversetelephone.join('');
+console.log(jointelephone);
