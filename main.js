@@ -134,3 +134,51 @@ const findNames2 = namesclass.find(function(el) {
 });
 
 console.log(findNames2);
+
+const numbersarr = [1, 2, 3, 4, 5]
+
+const fininexarr = numbersarr.findIndex(function (elem) {
+    return elem % 2 == 0
+}) //позволяет найти индекс первого элемента согласно согласно переданному в параметре коллбэку. Если элемент не найден, то возвращается -1.
+
+console.log(fininexarr); //1
+
+// findLastIndex() - помогает найти индекс первого элемента с конца массива, соответствующий условию согласно переданному в параметре коллбэку.Если элемента нет, то возвращается - 1.
+
+const include3 = numbersarr.includes(4);
+
+console.log(include3);
+
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present']
+
+const filteredwords = words.filter(e=> e.length > 6);
+console.log(filteredwords) // [ 'exuberant', 'destruction', 'present' ]
+
+// sort() - на месте сортирует элементы массива и возвращает отсортированный массив. Порядок сортировки по умолчанию соответствует порядку кодовых точек Unico
+// /
+// 1.сортирует строки “из коробки”, т.е.без доп параметров
+// 2.сортирует по порядку в таблице unicode
+// 3.Работает мутабельно, т.е. сортирует на месте
+// Т.е. если мы хотим отсортировать наш массив используя sort как нам надо, то в этом случае надо использовать функцию сравнения (callback).
+const sortnumbers = [1000, 4, 400, 22, -1]
+const compareFunction = (a, b) => {
+    // по возрастанию
+
+    //если возвращает число больше > 0 - надо переставить
+    // < 0 - то порядок не меняем
+    if (a > b) {
+        return 1
+    } else {
+        return -1
+    }
+}
+
+console.log(sortnumbers.sort(compareFunction)) //[ 1000, 4, 400, 22, -1 ]
+
+const compareFunction1 = (a, b) => a - b
+
+console.log(sortnumbers.sort(compareFunction1)) // [ -1, 4, 22, 400, 1000 ]
+
+const compareFunction2 = (a, b) => b - a
+
+console.log(sortnumbers.sort(compareFunction2)) // [ -1, 4, 22, 400, 1000 ]
