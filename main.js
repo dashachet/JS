@@ -182,3 +182,16 @@ console.log(sortnumbers.sort(compareFunction1)) // [ -1, 4, 22, 400, 1000 ]
 const compareFunction2 = (a, b) => b - a
 
 console.log(sortnumbers.sort(compareFunction2)) // [ -1, 4, 22, 400, 1000 ]
+
+
+
+const arr123 = [ 1, 2, 3, 4];
+function arrayPlusArray(arr123, arr2) {
+    let sum1 = 0;
+    for (let i = 0; i < arr123.length; i++)
+        sum1 += arr123[i];
+
+
+    console.log(sum1);
+}
+
