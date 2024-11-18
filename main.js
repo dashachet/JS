@@ -7,21 +7,104 @@ const names = ['Alex', 'Bob', "Ola", 'Ivan', 'Sasha'];
 console.log('names', names) ;
 const allnames = names.push('Mary');
 
+function itPush(array, el) {
+    array[array.length] = el
+    return array.length
+
+}
+    console.log(itPush('names', "Sarah" ))
+
+function itPush2(array, ...elements) {
+    for (let index = 0; index < elements.length; index++) {
+        array[array.length] = elements[index];
+        
+    }
+    return array.length
+}
+
+function itPush3() {
+    for (let index = 1; index < arguments.length; index++) {
+        arguments[0][arguments[0].length] = arguments[index];
+
+    }
+    return arguments[0].length;
+}
+
+function test() {
+
+    console.log(arguments); //подобный массиву объект; это локальная переменная, доступная внутри любой (нестрелочной) функции
+}
 console.log('allnames', allnames); // просто цифра / 5 
 
 const popnames = names.pop();
 console.log('popnames', popnames); // вернется переменная , которая удаляется \ Mary
 
+function itPop(array) {
+    const lastEl = array[array.length - 1]
+    array.length = array.length - 1
+    return lastEl
+}
+    console.log(function itPop(names));
+
+console.log(function itPop(names));
 const shiftnames = names.shift();
 console.log('shift names', shiftnames); //удаляет первый элемент из массива и возвращает его значение. Этот метод изменяет длину массива. Метод shift удаляет элемент по нулевому индексу, сдвигает значения по последовательным индексам вниз, а затем возвращает удалённое значение. Если свойство length массива равно 0, вернётся значение undefined (данный метод массива мутирует исходный массив).
 
+
+function itShift(array) {
+    const firstEl = array[0];
+    for (let index = 0; index < array.length; index++) {
+        array[i]= array[i + 1];
+    }
+    array.lenght = array.lenght - 1;
+    return firlEl;
+}
+
+
 const unshiftnames = names.unshift('Henadzii');
 console.log(unshiftnames); // вернется цифра
+
+function itUnshift(array, ...elements) {   
+    // array.lenght = array.lenght + elements.length;
+    // for (let index = 0; index < array.length; index++) {
+    //     const el = array[i + 1];
+    // }
+
+    // return array.length 
+
+    const temp = [...elements, ...array]
+    for (let index = 0; index < temp.length; index++) {
+        array[index] = temp[index];
+        
+    }
+    return array.length;
+}
 
 const reversenames = names.reverse();
 console.log(reversenames);
 
 
+function itReverse(array) {
+    let temp;
+    for (let index = array.lenght - 1; index >= Math.floor(array.length/2); index--) {
+        temp = array[index];
+        array[index] = array[array.lenght - 1 - i];
+        array[array.lenght - 1 - i] = temp
+        
+    }
+    return array
+}
+
+function itReversed(array) {
+    const newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        result[array.lenght - 1 - i] = array[i];
+        
+    }
+
+        return newArray;
+
+}
 const arr = ['ab', 'cd', 'ef' ];
 // const arrsplit = arr.split('-', 2);
 
@@ -81,6 +164,20 @@ arr.forEach(function(el) {
 
 });
 
+function itjoin(array, separator = ",") {
+    let result = "";
+    for (let index = 0; index < array.length; index++) {
+        if ( i === array.length - 1 ) {
+            result += array[i]
+            break;
+        } else {
+            result += array[i] + separator
+        }
+    
+        
+    }
+    return result;
+}
 // умножение на 2
 
 const numbers = [2, 5, 10];
@@ -146,6 +243,17 @@ console.log(fininexarr); //1
 // findLastIndex() - помогает найти индекс первого элемента с конца массива, соответствующий условию согласно переданному в параметре коллбэку.Если элемента нет, то возвращается - 1.
 
 const include3 = numbersarr.includes(4);
+
+function itIncludes(array, searchElement, fromIndex = 0) {
+    for (let index = fromIndex; index < array.length; index++) { 
+        if (array[i] === searchElement) {
+            return true
+        }
+            
+        
+    }
+    return false;
+}
 
 console.log(include3);
 
