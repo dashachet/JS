@@ -38,12 +38,59 @@ Array.prototype.itFilter = function(checkFunction) {
         if (checkFunction(this[index])) {
             result.push(this[index]);
         }
-        
+    return result;
     }
 
-    return result;
+
 
 }
+
+const even = nums.itFilter((n)=>  {
+    if( n % 2 === 0) {
+    return true 
+}
+    else  {
+        return false
+    }
+} )
+
+//метод map
+
+function iTMap(array, mapfunction) {
+    const result5= [];
+    for (let index = 0; index < array.length; index++) {
+        const Newelement = mapfunction(array[index])
+        result5.push(Newelement);
+    }
+    return result5
+}
+
+Array.prototype.iTMap = iTMap; 
+console.log(even)
+console.log(iTMap(num, n => n % 2 ===0));
+
+
+// reduce
+
+function itReduce(array, reducer, startValue) {
+    let start = startValue;
+    for (let index = 0; index < array.length; index++) {
+        start = reducer(start, array[i])
+        
+    }
+    return  start
+
+}
+    const arrnums = [1, 2, 3, 2, 1, 5, 2, 2];
+
+
+    function objArr (array) {
+        const result ={}
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            
+        }
+    }
 // splice() - удаляет или добавляет элементы в массив.Можно только удалять элементы, только добавлять или делать и то и другое одновременно; изменяет сам массив и возвращает при этом массив удаленных элементов.
 
 // Первым параметром метод принимает номер элемента массива, который нужно удалить.Вторым параметром - сколько элементов массива следует удалить.Если его поставить в 0 - то элементы удалены не будут(только добавлены новые).Дальше через запятую идут элементы, которые нужно добавить в массив(являются необязательными параметрами).Эти элементы добавятся вместо удаленных элементов массива.
