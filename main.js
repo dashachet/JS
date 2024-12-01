@@ -44,9 +44,9 @@ function itPop(array) {
     array.length = array.length - 1
     return lastEl
 }
-    console.log(function itPop(names));
+    // console.log(itPop(names))
 
-console.log(function itPop(names));
+console.log(itPop(names));
 const shiftnames = names.shift();
 console.log('shift names', shiftnames); //удаляет первый элемент из массива и возвращает его значение. Этот метод изменяет длину массива. Метод shift удаляет элемент по нулевому индексу, сдвигает значения по последовательным индексам вниз, а затем возвращает удалённое значение. Если свойство length массива равно 0, вернётся значение undefined (данный метод массива мутирует исходный массив).
 
@@ -244,16 +244,16 @@ console.log(fininexarr); //1
 
 const include3 = numbersarr.includes(4);
 
-function itIncludes(array, searchElement, fromIndex = 0) {
-    for (let index = fromIndex; index < array.length; index++) { 
-        if (array[i] === searchElement) {
-            return true
-        }
+// function itIncludes(array, searchElement, fromIndex = 0) {
+//     for (let index = fromIndex; index < array.length; index++) { 
+//         if (array[i] === searchElement) {
+//             return true
+//         }
             
         
-    }
-    return false;
-}
+//     }
+//     return false;
+// }
 
 console.log(include3);
 
@@ -302,4 +302,5 @@ function arrayPlusArray(arr123, arr2) {
 
     console.log(sum1);
 }
+
 
