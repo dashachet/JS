@@ -41,3 +41,11 @@ String.prototype.digit = function() {
 function all(arr, fun) {
     return arr.every(fun)
 }
+
+
+// Given an array of numbers, return a new array of length number containing the last even numbers from the original array(in the same order).The original array will be not empty and will contain at least "number" even numbers.
+function evenNumbers(array, n) {
+    const newArr = array.filter(el => el % 2 === 0)
+    const reveseArr = newArr.slice(-n)
+    return reveseArr
+}

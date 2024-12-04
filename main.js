@@ -303,4 +303,11 @@ function arrayPlusArray(arr123, arr2) {
     console.log(sum1);
 }
 
+const superArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+function evenNumbers (superArr) {
+    const newArr = superArr.filter(el => el % 2 === 0)
+
+    console.log(newArr)
+
+} 
