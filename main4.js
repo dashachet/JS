@@ -21,3 +21,5 @@ function createObject(key, value) {
     }
 }
 createObject('car', 'Audi')
+
+const map = new Map()
