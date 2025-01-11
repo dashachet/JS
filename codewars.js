@@ -81,3 +81,11 @@ const periodIsLate = (last, today, cycleLength) => {
 
     return diferenceDays > cycleLength
 }
+
+// Type of sum
+// Return the type of the sum of the two arguments
+
+function typeOfSum(a, b) {
+    let k = a + b
+    return typeof k
+}
