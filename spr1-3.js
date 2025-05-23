@@ -122,3 +122,4 @@ let b = a.reduce(function (prev, item, index) {
 }, 0)
 
 console.log('b', b) //15
+
