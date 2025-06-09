@@ -51,3 +51,51 @@ const inputTransferAmount = document.querySelector(".form__input--amount");
 const inputLoanAmount = document.querySelector(".form__input--loan-amount");
 const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
+
+
+function displayMovements(movements) {
+  movements.forEach(function (value, index) {
+    containerMovements.innerHTML = ""
+    const type = value > 0 ? 'deposit' : 'withdrawal'
+    const operation = value > 0 ? 'пополнение' : 'снятие'
+    const html= `
+      <div class="movements__row">
+          <div class="movements__type movements__type--${type}">
+            ${index + 1 } ${operation}
+          </div>
+          <div class="movements__date">3 дня назад</div>
+          <div class="movements__value">${value}₽</div>
+        </div>
+       
+    ` 
+    containerMovements.insertAdjacentHTML("afterbegin", html)
+  })
+}
+
+// function createLogIn(accs) {
+//    accs.forEach(function (acc) {
+//     acc.logIn = acc.owner
+//       .toLowerCase()
+//       .split(' ')
+//       .map(function (val) {
+//         return val[0]
+//       })
+//       .join('')
+//   })
+
+// }
+
+function createLogIn(accs) {
+  accs.forEach(function (acc) {
+    acc.logIn = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map(function (val) {
+        return val[0];
+      })
+      .join("");
+  });
+}
+
+createLogIn(accounts);
+console.log(account3.logIn)
