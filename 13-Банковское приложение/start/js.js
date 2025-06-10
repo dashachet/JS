@@ -98,4 +98,12 @@ function createLogIn(accs) {
 }
 
 createLogIn(accounts);
-console.log(account3.logIn)
+
+function calcBalance(movements) {
+  const balance = movements.reduce(function(acc, val) {
+    return acc + val
+  })
+  labelBalance.textContent = `${balance} USD`
+}
+
+calcBalance(account1.movements)
