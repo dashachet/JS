@@ -41,3 +41,15 @@ function indexOf(arr, el, fromIndex = 0) {
 }
 
 console.log(indexOf(array, 2, 3));
+
+function itReverse(arr) {
+  for (let i = 0; i < Math.floor(arr.length/2); i++) {
+    let element = arr[arr.length - 1 - i ];
+    arr[arr.length - 1 - i] = arr[i]
+    arr[i] = element
+    
+  }
+  return arr
+}
+
+console.log(itReverse(array));
