@@ -52,4 +52,18 @@ function itReverse(arr) {
   return arr
 }
 
+function reverse(array) {
+  const stack = [];
+  for (let i = 0; i < array.length; i++) {
+    stack.push(array[i]);
+  }
+  const reversedArray = [];
+  while (stack.length > 0) {
+    reversedArray.push(stack.pop());
+  }
+
+  return reversedArray;
+}
+
 console.log(itReverse(array));
+console.log(itReverse2(array));
