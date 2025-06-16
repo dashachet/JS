@@ -66,4 +66,20 @@ function reverse(array) {
 }
 
 console.log(itReverse(array));
-console.log(itReverse2(array));
+console.log(reverse(array));
+
+function sliceArray(arr, begin = 0, end = arr.length) {
+    let result = [];
+    begin = begin < 0 ? 
+    arr.length + begin 
+    : begin;
+    end  = end < 0 ? 
+    arr.length + end :
+    end
+     for (let i = 0; i + begin < end; i++) {
+         result[i] = arr[i + begin];
+    
+     }
+     return result
+}
+

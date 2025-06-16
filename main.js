@@ -56,7 +56,7 @@ function itShift(array) {
     for (let index = 0; index < array.length; index++) {
         array[i]= array[i + 1];
     }
-    array.lenght = array.lenght - 1;
+    array.length = array.length - 1;
     return firlEl;
 }
 
